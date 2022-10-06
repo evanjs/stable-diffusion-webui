@@ -23,6 +23,7 @@ import gradio.utils
 import gradio.routes
 
 from modules import sd_hijack
+from modules.deepbooru import get_deepbooru_tags
 from modules.paths import script_path
 from modules.shared import opts, cmd_opts
 import modules.shared as shared
@@ -373,6 +374,11 @@ def interrogate(image):
     return gr_show(True) if prompt is None else prompt
 
 
+def interrogate_deepbooru(image):
+    prompt = get_deepbooru_tags(image)
+    return gr_show(True) if prompt is None else prompt
+
+
 def create_seed_inputs():
     with gr.Row():
         with gr.Box():
@@ -506,15 +512,17 @@ def create_toprow(is_img2img):
                     outputs=[],
                 )
 
-            with gr.Row():
+            with gr.Row(scale=1):
                 if is_img2img:
-                    interrogate = gr.Button('Interrogate', elem_id="interrogate")
+                    interrogate = gr.Button('Interrogate\nCLIP', elem_id="interrogate")
+                    deepbooru = gr.Button('Interrogate\nDeepBooru', elem_id="deepbooru")
                 else:
                     interrogate = None
+                    deepbooru = None
                 prompt_style_apply = gr.Button('Apply style', elem_id="style_apply")
                 save_style = gr.Button('Create style', elem_id="style_create")
 
-    return prompt, roll, keyword, person, prompt_style, negative_prompt, prompt_style2, submit, interrogate, prompt_style_apply, save_style, paste, token_counter, token_button
+    return prompt, roll, keyword, person, prompt_style, negative_prompt, prompt_style2, submit, interrogate, deepbooru, prompt_style_apply, save_style, paste, token_counter, token_button
 
 
 def setup_progressbar(progressbar, preview, id_part, textinfo=None):
@@ -543,7 +551,7 @@ def create_ui(wrap_gradio_gpu_call):
     import modules.txt2img
 
     with gr.Blocks(analytics_enabled=False) as txt2img_interface:
-        txt2img_prompt, roll, keyword, person, txt2img_prompt_style, txt2img_negative_prompt, txt2img_prompt_style2, submit, _, txt2img_prompt_style_apply, txt2img_save_style, paste, token_counter, token_button = create_toprow(is_img2img=False)
+        txt2img_prompt, roll, keyword, person, txt2img_prompt_style, txt2img_negative_prompt, txt2img_prompt_style2, submit, _, _, txt2img_prompt_style_apply, txt2img_save_style, paste, token_counter, token_button = create_toprow(is_img2img=False)
         dummy_component = gr.Label(visible=False)
 
         with gr.Row(elem_id='txt2img_progress_row'):
@@ -715,7 +723,7 @@ def create_ui(wrap_gradio_gpu_call):
             token_button.click(fn=update_token_counter, inputs=[txt2img_prompt, steps], outputs=[token_counter])
 
     with gr.Blocks(analytics_enabled=False) as img2img_interface:
-        img2img_prompt, roll, keyword, person, img2img_prompt_style, img2img_negative_prompt, img2img_prompt_style2, submit, img2img_interrogate, img2img_prompt_style_apply, img2img_save_style, paste, token_counter, token_button = create_toprow(is_img2img=True)
+        img2img_prompt, roll, keyword, person, img2img_prompt_style, img2img_negative_prompt, img2img_prompt_style2, submit, img2img_interrogate, img2img_deepbooru, img2img_prompt_style_apply, img2img_save_style, paste, token_counter, token_button = create_toprow(is_img2img=True)
 
         with gr.Row(elem_id='img2img_progress_row'):
             with gr.Column(scale=1):
@@ -868,6 +876,12 @@ def create_ui(wrap_gradio_gpu_call):
 
             img2img_interrogate.click(
                 fn=interrogate,
+                inputs=[init_img],
+                outputs=[img2img_prompt],
+            )
+
+            img2img_deepbooru.click(
+                fn=interrogate_deepbooru,
                 inputs=[init_img],
                 outputs=[img2img_prompt],
             )
