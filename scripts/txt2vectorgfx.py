@@ -1,0 +1,1 @@
+../external/txt2vectorgraphics/txt2vectorgfx.py
