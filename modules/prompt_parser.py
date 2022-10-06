@@ -1,6 +1,7 @@
 import re
 from collections import namedtuple
 from typing import List
+from modules.prompt_parser_weights import get_weighted_prompt, switch_syntax
 import lark
 
 # a prompt like this: "fantasy landscape with a [mountain:lake:0.25] and [an oak:a christmas tree:0.75][ in foreground::0.6][ in background:0.25] [shoddy:masterful:0.5]"
@@ -99,6 +100,30 @@ def get_learned_conditioning_prompt_schedules(prompts, steps):
 ScheduledPromptConditioning = namedtuple("ScheduledPromptConditioning", ["end_at_step", "cond"])
 
 
+def get_learned_conditioning_weighted(model, texts):
+    weighted_prompts = list(map(lambda t: get_weighted_prompt((t, 1)), texts))
+    all_texts = []
+    for weighted_prompt in weighted_prompts:
+        for (prompt, weight) in weighted_prompt:
+            all_texts.append(prompt)
+
+    if len(all_texts) > len(texts):
+        all_conds = model.get_learned_conditioning(all_texts)
+        offset = 0
+
+        conds = []
+
+        for weighted_prompt in weighted_prompts:
+            c = torch.zeros_like(all_conds[offset])
+            for (i, (prompt, weight)) in enumerate(weighted_prompt):
+                c = torch.add(c, all_conds[i+offset], alpha=weight)
+            conds.append(c)
+            offset += len(weighted_prompt)
+        return conds
+    else:
+        return model.get_learned_conditioning(texts)
+
+
 def get_learned_conditioning(model, prompts, steps):
     """converts a list of prompts into a list of prompt schedules - each schedule is a list of ScheduledPromptConditioning, specifying the comdition (cond),
     and the sampling step at which this condition is to be replaced by the next one.
@@ -119,7 +144,8 @@ def get_learned_conditioning(model, prompts, steps):
     """
     res = []
 
-    prompt_schedules = get_learned_conditioning_prompt_schedules(prompts, steps)
+    switched_prompts = list(map(lambda p: switch_syntax(p), prompts))
+    prompt_schedules = get_learned_conditioning_prompt_schedules(switched_prompts, steps)
     cache = {}
 
     for prompt, prompt_schedule in zip(prompts, prompt_schedules):
@@ -130,7 +156,7 @@ def get_learned_conditioning(model, prompts, steps):
             continue
 
         texts = [x[1] for x in prompt_schedule]
-        conds = model.get_learned_conditioning(texts)
+        conds = get_learned_conditioning_weighted(model, texts)
 
         cond_schedule = []
         for i, (end_at_step, text) in enumerate(prompt_schedule):
