@@ -1,1 +1,1 @@
-external/jtkelm2/scripts/wildcards.py
+../external/jtkelm2/scripts/wildcards.py
