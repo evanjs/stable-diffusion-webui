@@ -35,3 +35,6 @@
 [submodule "external/animator"]
 	path = external/animator
 	url = https://github.com/Animator-Anon/stable-diffusion-webui/
+[submodule "external/amotile"]
+	path = external/amotile
+	url = https://github.com/amotile/stable-diffusion-backend.git
