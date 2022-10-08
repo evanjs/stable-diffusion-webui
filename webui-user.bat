@@ -3,6 +3,6 @@
 set PYTHON=
 set GIT=
 set VENV_DIR=
-set COMMANDLINE_ARGS=--listen --allow-code --max-batch-count 36 --xformers
+set COMMANDLINE_ARGS=--listen --allow-code --max-batch-count 36 --xformers --deepdanbooru
 
 call webui.bat
