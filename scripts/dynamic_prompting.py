@@ -1,0 +1,1 @@
+../external/dynamic_prompting/dynamic_prompting.py

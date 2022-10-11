@@ -38,3 +38,6 @@
 [submodule "external/amotile"]
 	path = external/amotile
 	url = https://github.com/amotile/stable-diffusion-backend.git
+[submodule "external/dynamic_prompting"]
+	path = external/dynamic_prompting
+	url = https://github.com/adieyal/sd-dynamic-prompting
