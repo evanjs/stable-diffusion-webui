@@ -1,0 +1,47 @@
+[submodule "external/stable-diffusion-webui-video"]
+	path = external/stable-diffusion-webui-video
+	url = https://github.com/memes-forever/Stable-diffusion-webui-video
+[submodule "external/seed_travel"]
+	path = external/seed_travel
+	url = https://github.com/yownas/seed_travel
+[submodule "external/txt2img2img"]
+	path = external/txt2img2img
+	url = https://github.com/ThereforeGames/txt2img2img/
+[submodule "external/vid2vid"]
+	path = external/vid2vid
+	url = https://github.com/Filarius/stable-diffusion-webui
+[submodule "external/txt2vectorgraphics"]
+	path = external/txt2vectorgraphics
+	url = https://github.com/GeorgLegato/Txt2Vectorgraphics
+[submodule "external/shift-attention"]
+	path = external/shift-attention
+	url = https://github.com/yownas/shift-attention
+[submodule "external/loopback_superimpose"]
+	path = external/loopback_superimpose
+	url = https://github.com/DiceOwl/StableDiffusionStuff
+[submodule "external/amotile"]
+	path = external/amotile
+	url = https://github.com/amotile/stable-diffusion-webui
+[submodule "external/animator"]
+	path = external/animator
+	url = https://github.com/Animator-Anon/Animator
+[submodule "external/boorucomplete"]
+	path = external/boorucomplete
+	url = https://github.com/evanjs/a1111-sd-webui-tagcomplete
+[submodule "external/dynamic_prompting"]
+	path = external/dynamic_prompting
+	url = git@github.com:evanjs/sd-dynamic-prompting.git
+	branch = extended-glob
+[submodule "external/jtkelm2"]
+	path = external/jtkelm2
+	url = https://github.com/jtkelm2/stable-diffusion-webui-1
+[submodule "external/advanced-prompt-matrix"]
+	path = external/advanced-prompt-matrix
+	url = https://github.com/GRMrGecko/stable-diffusion-webui-automatic
+	branch = advanced_matrix
+[submodule "external/stable-diffusion-webui-cv2-external-masking-script"]
+	path = external/stable-diffusion-webui-cv2-external-masking-script
+	url = https://github.com/dfaker/stable-diffusion-webui-cv2-external-masking-script.git
+[submodule "external/txt2mask"]
+	path = external/txt2mask
+	url = https://github.com/ThereforeGames/txt2mask
