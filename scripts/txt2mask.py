@@ -1,0 +1,1 @@
+../external/txt2mask/scripts/txt2mask.py

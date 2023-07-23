@@ -1,0 +1,201 @@
+[submodule "external/stable-diffusion-webui-video"]
+	path = external/stable-diffusion-webui-video
+	url = https://github.com/memes-forever/Stable-diffusion-webui-video
+[submodule "external/seed_travel"]
+	path = external/seed_travel
+	url = https://github.com/yownas/seed_travel
+[submodule "external/txt2img2img"]
+	path = external/txt2img2img
+	url = https://github.com/ThereforeGames/txt2img2img/
+[submodule "external/vid2vid"]
+	path = external/vid2vid
+	url = https://github.com/Filarius/stable-diffusion-webui
+[submodule "external/txt2vectorgraphics"]
+	path = external/txt2vectorgraphics
+	url = https://github.com/GeorgLegato/Txt2Vectorgraphics
+[submodule "external/shift-attention"]
+	path = external/shift-attention
+	url = https://github.com/yownas/shift-attention
+[submodule "external/loopback_superimpose"]
+	path = external/loopback_superimpose
+	url = https://github.com/DiceOwl/StableDiffusionStuff
+[submodule "external/amotile"]
+	path = external/amotile
+	url = https://github.com/amotile/stable-diffusion-backend
+[submodule "external/animator"]
+	path = external/animator
+	url = https://github.com/Animator-Anon/Animator
+[submodule "external/boorucomplete"]
+	path = external/boorucomplete
+	url = https://github.com/DominikDoom/a1111-sd-webui-tagcomplete
+[submodule "external/sd-dynamic-prompting"]
+	path = external/sd-dynamic-prompting
+	url = https://github.com/adieyal/sd-dynamic-prompting
+[submodule "external/stable-diffusion-webui-cv2-external-masking-script"]
+	path = external/stable-diffusion-webui-cv2-external-masking-script
+	url = https://github.com/dfaker/stable-diffusion-webui-cv2-external-masking-script.git
+[submodule "external/txt2mask"]
+	path = external/txt2mask
+	url = https://github.com/ThereforeGames/txt2mask
+	ignore = dirty
+[submodule "external/images-browser"]
+	path = external/images-browser
+	url = https://github.com/yfszzx/stable-diffusion-webui-images-browser
+	ignore = dirty
+[submodule "external/aesthetic-gradients"]
+	path = external/aesthetic-gradients
+	url = https://github.com/AUTOMATIC1111/stable-diffusion-webui-aesthetic-gradients
+[submodule "external/inspiration"]
+	path = external/inspiration
+	url = https://github.com/yfszzx/stable-diffusion-webui-inspiration
+	ignore = dirty
+[submodule "external/StylePile"]
+	path = external/StylePile
+	url = https://github.com/some9000/StylePile
+	ignore = dirty
+[submodule "external/sdexperiments"]
+	path = external/sdexperiments
+	url = https://github.com/TKoestlerx/sdexperiments
+[submodule "external/UnivAICharGen"]
+	path = external/UnivAICharGen
+	url = https://github.com/Klokinator/UnivAICharGen
+[submodule "external/sd-dynamic-prompts"]
+	path = external/sd-dynamic-prompts
+	url = https://github.com/adieyal/sd-dynamic-prompts
+[submodule "external/novelai-2-local-prompt"]
+	path = external/novelai-2-local-prompt
+	url = https://github.com/animerl/novelai-2-local-prompt
+[submodule "external/sd-webui-controlnet"]
+	path = external/sd-webui-controlnet
+	url = https://github.com/Mikubill/sd-webui-controlnet
+	ignore = dirty
+[submodule "external/sd-civitai-browser"]
+	path = external/sd-civitai-browser
+	url = https://github.com/Vetchems/sd-civitai-browser.git
+	ignore = dirty
+[submodule "external/unprompted"]
+	path = external/unprompted
+	url = https://github.com/ThereforeGames/unprompted.git
+	ignore = dirty
+[submodule "external/sd_civitai_extension"]
+	path = external/sd_civitai_extension
+	url = https://github.com/civitai/sd_civitai_extension.git
+[submodule "external/stable-diffusion-webui-images-browser"]
+	path = external/stable-diffusion-webui-images-browser
+	url = https://github.com/AlUlkesh/stable-diffusion-webui-images-browser
+	ignore = dirty
+[submodule "external/sd_dreambooth_extension"]
+	path = external/sd_dreambooth_extension
+	url = https://github.com/d8ahazard/sd_dreambooth_extension
+[submodule "external/improved-prompt-matrix"]
+	path = external/improved-prompt-matrix
+	url = https://github.com/ArrowM/auto1111-improved-prompt-matrix
+[submodule "external/prompt-gallery"]
+	path = external/prompt-gallery
+	url = https://github.com/dr413677671/PromptGallery-stable-diffusion-webui
+	ignore = dirty
+[submodule "external/deforum"]
+	path = external/deforum
+	url = https://github.com/deforum-art/deforum-for-automatic1111-webui
+[submodule "external/sd-parseq"]
+	path = external/sd-parseq
+	url = https://github.com/rewbs/sd-parseq
+[submodule "external/test_my_prompt"]
+	path = external/test_my_prompt
+	url = https://github.com/Extraltodeus/test_my_prompt
+	ignore = dirty
+[submodule "external/sd-model-preview"]
+	path = external/sd-model-preview
+	url = https://github.com/Vetchems/sd-model-preview
+[submodule "external/next_vit"]
+	path = external/next_vit
+	url = https://github.com/isl-org/Next-ViT
+[submodule "external/stable-diffusion-webui-aesthetic-image-scorer"]
+	path = external/stable-diffusion-webui-aesthetic-image-scorer
+	url = https://github.com/tsngo/stable-diffusion-webui-aesthetic-image-scorer
+[submodule "external/TikTokDiffusion"]
+	path = external/TikTokDiffusion
+	url = https://github.com/TingTingin/TikTokDiffusion
+	ignore = dirty
+[submodule "external/a1111-sd-webui-locon"]
+	path = external/a1111-sd-webui-locon
+	url = https://github.com/KohakuBlueleaf/a1111-sd-webui-locon
+[submodule "external/Stable-Diffusion-Webui-Civitai-Helper"]
+	path = external/Stable-Diffusion-Webui-Civitai-Helper
+	url = https://github.com/butaixianran/Stable-Diffusion-Webui-Civitai-Helper.git
+[submodule "external/video2video"]
+	path = external/video2video
+	url = https://github.com/Filarius/video2video
+	ignore = dirty
+[submodule "external/batch-face-swap"]
+	path = external/batch-face-swap
+	url = https://github.com/kex0/batch-face-swap.git
+[submodule "external/multidiffusion-upscaler-for-automatic1111"]
+	path = external/multidiffusion-upscaler-for-automatic1111
+	url = https://github.com/pkuliyi2015/multidiffusion-upscaler-for-automatic1111
+[submodule "external/sd-webui-llul"]
+	path = external/sd-webui-llul
+	url = https://github.com/hnmr293/sd-webui-llul
+[submodule "external/stable-diffusion-webui-composable-lora"]
+	path = external/stable-diffusion-webui-composable-lora
+	url = https://github.com/opparco/stable-diffusion-webui-composable-lora
+[submodule "external/stable-diffusion-webui-two-shot"]
+	path = external/stable-diffusion-webui-two-shot
+	url = https://github.com/ashen-sensored/stable-diffusion-webui-two-shot
+	branch = feature/mask_selection
+[submodule "external/training-picker"]
+	path = external/training-picker
+	url = https://github.com/Maurdekye/training-picker
+	ignore = dirty
+[submodule "external/openpose-editor"]
+	path = external/openpose-editor
+	url = https://github.com/fkunn1326/openpose-editor
+[submodule "external/sd-webui-lora-uc"]
+	path = external/sd-webui-lora-uc
+	url = https://github.com/pamparamm/sd-webui-lora-uc
+	ignore = dirty
+[submodule "external/stable-diffusion-webui-daam"]
+	path = external/stable-diffusion-webui-daam
+	url = https://github.com/toriato/stable-diffusion-webui-daam
+[submodule ".\\external\\stable-diffusion-webui-two-shot\\"]
+	branch = feature/mask_selection
+[submodule "external/asymmetric-tiling-sd-webui"]
+	path = external/asymmetric-tiling-sd-webui
+	url = https://github.com/tjm35/asymmetric-tiling-sd-webui.git
+	ignore = dirty
+[submodule ".\\external\\deforum"]
+	branch = automatic1111-webui
+[submodule "external/model-keyword"]
+	path = external/model-keyword
+	url = https://github.com/mix1009/model-keyword
+	ignore = dirty
+[submodule "external/sd-webui-additional-networks"]
+	path = external/sd-webui-additional-networks
+	url = https://github.com/kohya-ss/sd-webui-additional-networks.git
+[submodule "external/sd-webui-model-converter"]
+	path = external/sd-webui-model-converter
+	url = https://github.com/Akegarasu/sd-webui-model-converter
+[submodule "external/sd_smartprocess"]
+	path = external/sd_smartprocess
+	url = https://github.com/d8ahazard/sd_smartprocess
+[submodule "external/sd-dynamic-thresholding"]
+	path = external/sd-dynamic-thresholding
+	url = https://github.com/mcmonkeyprojects/sd-dynamic-thresholding
+[submodule "external/sd-extension-system-info"]
+	path = external/sd-extension-system-info
+	url = https://github.com/vladmandic/sd-extension-system-info
+[submodule "external/a1111-sd-webui-lycoris"]
+	path = external/a1111-sd-webui-lycoris
+	url = https://github.com/KohakuBlueleaf/a1111-sd-webui-lycoris
+[submodule "external/openOutpaint-webUI-extension"]
+	path = external/openOutpaint-webUI-extension
+	url = https://github.com/zero01101/openOutpaint-webUI-extension
+[submodule "external/sd-webui-roop"]
+	path = external/sd-webui-roop
+	url = https://github.com/s0md3v/sd-webui-roop
+[submodule "external/adetailer"]
+	path = external/adetailer
+	url = https://github.com/Bing-su/adetailer
+[submodule "external/ddetailer.git"]
+	path = external/ddetailer.git
+	url = https://github.com/dustysys/ddetailer.git
